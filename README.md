@@ -2,7 +2,7 @@
 
 A blockchain-powered platform for buying and selling data securely using Ethereum smart contracts and IPFS storage.
 
-![Decentralized Data Marketplace](https://your-image-url-here.jpg)
+![Decentralized Data Marketplace](./res/image.png)
 
 ## Table of Contents
 
