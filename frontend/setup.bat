@@ -10,7 +10,13 @@ if %ERRORLEVEL% neq 0 (
 
 REM Install dependencies
 echo Installing dependencies...
-call npm install
+
+if not exist node_modules (
+    echo node_modules directory not found. Installing dependencies...
+    npm install
+) else (
+    echo node_modules directory already exists. Skipping installation.
+)
 
 REM Check if .env file exists, create from example if not
 if not exist .env (

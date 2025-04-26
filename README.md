@@ -91,10 +91,15 @@ cd blockchain
 npm install
 ```
 
-3. Compile and deploy the smart contracts:
+3. Start a local blockchain node
+```bash
+npx hardhat node
+```
+
+4. Open a new terminal window and compile and deploy the smart contracts:
 ```bash
 npx hardhat compile
-npx hardhat ignition deploy ./ignition/modules/DataMarketplace.js
+npx hardhat ignition deploy ./ignition/modules/DataMarketplace.js --network localhost
 ```
 
 4. Install frontend dependencies:
@@ -150,16 +155,6 @@ The React frontend provides an intuitive interface for interacting with the mark
 4. **Browse Marketplace** - Discover datasets available for purchase
 5. **Purchase Data (Companies)** - Buy data assets with cryptocurrency
 6. **Manage Assets** - Access your dashboard to view uploads, purchases, and earnings
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
