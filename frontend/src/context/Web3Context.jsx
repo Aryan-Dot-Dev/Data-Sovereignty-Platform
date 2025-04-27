@@ -1,13 +1,11 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { ethers } from 'ethers';
-import { default as DataMarketplace } from '../utils/DataMarketplace.json';
+import { default as DataMarketplace } from '../../../blockchain/artifacts/contracts/DataMarketplace.sol/DataMarketplace.json';
 
 const DataMarketplaceABI = DataMarketplace.abi;
 
-// Create Web3 context
 const Web3Context = createContext();
 
-// Get contract address and chain ID from environment variables or use defaults
 const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS || '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 const targetChainId = import.meta.env.VITE_TARGET_CHAIN_ID || '31337';
 
